@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de Carreras</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('fondo2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    nav {
+      background-color: #c2cbd4;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .logo {
+      position: absolute;
+      left: 15px;
+      height: 60px;
+      width: auto;
+    }
+    .boton {
+      background-color: #d0e0ff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .boton:hover {
+      background-color: #a5c9ff;
+      transform: scale(1.05);
+    }
+    .destacado {
+      background-color: #e57373 !important;
+      font-weight: bold;
+    }
+
+    .seccion {
+      padding: 40px 20px;
+    }
+    .seccion h3 {
+      text-align: center;
+      color: #ffffff;
+      background-color: rgba(74, 144, 226, 0.8);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .resultado {
+      background-color: rgba(230, 240, 255, 0.9);
+      border-left: 6px solid #4a90e2;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .resultado h4 {
+      margin: 0 0 10px 0;
+      color: #1a3e72;
+    }
+    .resultado p {
+      margin: 5px 0;
+      color: #333;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación igual que en el index -->
+  <nav>
+    <img src="ADK.jpg" alt="Logo ADKC" class="logo">
+    <button class="boton" onclick="history.back()">Atrás</button>
+    <a href="FORMULARIO.html"><button class="boton">Únete y compite</button></a>
+    <a href="INFO.html"><button class="boton">Requisitos</button></a>
+    <a href="https://maps.app.goo.gl/2Mbgy83nfYngbA1X8" target="_blank"><button class="boton">Ubicación</button></a>
+    <a href="CALENDARIO.html"><button class="boton destacado">Calendario</button></a>
+    <a href="RES.html"><button class="boton destacado">Resultados</button></a>
+    <a href="CAMP.html"><button class="boton destacado">Campeonato</button></a>
+  </nav>
+
+  <div id="resultados" class="seccion">
+    <h3>Resultados de Carreras Pasadas</h3>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+
+      <div class="resultado">
+        <h4>GP de Mónaco 2025</h4>
+        <p>1° Charles Leclerc</p>
+        <p>2° Oscar Piastri</p>
+        <p>3° Carlos Sainz</p>
+      </div>
+
+      <div class="resultado">
+        <h4>GP de Imola 2024</h4>
+        <p>1° Max Verstappen</p>
+        <p>2° Lando Norris</p>
+        <p>3° Charles Leclerc</p>
+      </div>
+
+      <div class="resultado">
+        <h4>GP de Miami 2024</h4>
+        <p>1° Lando Norris</p>
+        <p>2° Max Verstappen</p>
+        <p>3° Charles Leclerc</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Inscripción - ADKC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 🔹 Estilos de la barra de navegación */
+    nav {
+      background-color: #c2cbd4;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      position: absolute;
+      left: 15px;
+      height: 60px;
+      width: auto;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: black;
+      position: absolute;
+      right: 20px;
+    }
+
+    .menu-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .boton {
+      background-color: #d0e0ff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #a5c9ff;
+      transform: scale(1.05);
+    }
+
+    .destacado {
+      background-color: #e57373 !important;
+      font-weight: bold;
+    }
+
+    @media (max-width: 991px) {
+      .logo {
+        position: static;
+        margin-bottom: 10px;
+        height: 40px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .menu-links.show {
+        display: flex;
+      }
+
+      .boton {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .formulario-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: 3px solid #337ab7;
+    }
+
+    h2 {
+      text-align: center;
+      color: #337ab7;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #337ab7;
+      border-radius: 6px;
+    }
+
+    .fila {
+      display: flex;
+      gap: 20px;
+    }
+
+    .fila .campo {
+      flex: 1;
+    }
+
+    .departamento-box {
+      margin-top: 20px;
+      padding: 15px;
+      border: 2px solid #000;
+      background-color: #fefefe;
+      border-radius: 6px;
+    }
+
+    .departamentos {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .departamentos button {
+      border: 2px solid #000;
+      border-radius: 6px;
+      width: 100px;
+      height: 70px;
+      position: relative;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+
+    .departamentos button span {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      font-weight: bold;
+      color: black;
+      background-color: rgba(255,255,255,0.7);
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    .departamentos button:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    button.submit-btn {
+      margin-top: 30px;
+      width: 100%;
+      padding: 12px;
+      background-color: #337ab7;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button.submit-btn:hover {
+      background-color: #23527c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Barra de navegación -->
+  <nav>
+    <img src="ADK.jpg" alt="Logo ADKC" class="logo">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu-links">
+      <button class="boton" onclick="history.back()">Atrás</button>
+      <a href="FORMULARIO.html"><button class="boton">Únete y compite</button></a>
+      <a href="INFO.html"><button class="boton">Requisitos</button></a>
+      <a href="https://maps.app.goo.gl/2Mbgy83nfYngbA1X8" target="_blank"><button class="boton">Ubicación</button></a>
+      <a href="CALENDARIO.html"><button class="boton destacado">Calendario</button></a>
+      <a href="RES.html"><button class="boton destacado">Resultados</button></a>
+      <a href="CAMP.html"><button class="boton destacado">Campeonato</button></a>
+    </div>
+  </nav>
+
+  <!-- 🔹 Formulario -->
+  <div class="formulario-container">
+    <h2>Formulario de Inscripción</h2>
+    <form>
+      <label>Nombre completo</label>
+      <input type="text" name="nombre" required>
+
+      <div class="fila">
+        <div class="campo">
+          <label>Edad</label>
+          <input type="number" name="edad" required>
+        </div>
+        <div class="campo">
+          <label>Fecha de nacimiento</label>
+          <input type="date" name="fecha_nac" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label>Categoría</label>
+          <select name="categoria" required>
+            <option value="" disabled selected>Seleccione categoría</option>
+            <option>Baby Kart 6.5</option>
+            <option>Infantil 6.5</option>
+            <option>F200 Estándar</option>
+            <option>F200 Super</option>
+            <option>F200 Master</option>
+            <option>Junior 125</option>
+            <option>Profesional</option>
+            <option>Master</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label>Equipo</label>
+          <input type="text" name="equipo" required>
+        </div>
+      </div>
+
+      <div class="departamento-box">
+        <label><strong>Departamento</strong></label>
+        <div class="departamentos">
+          <label>
+            <input type="radio" name="departamento" value="Chuquisaca" required style="display:none;">
+            <button type="button" style="background-image:url('chuquisaca.png')">
+              <span>Chuquisaca</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="La Paz" required style="display:none;">
+            <button type="button" style="background-image:url('lapaz.png')">
+              <span>La Paz</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Cochabamba" required style="display:none;">
+            <button type="button" style="background-image:url('cochabamba.jpg')">
+              <span>Cochabamba</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Oruro" required style="display:none;">
+            <button type="button" style="background-image:url('oruro.png')">
+              <span>Oruro</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Potosí" required style="display:none;">
+            <button type="button" style="background-image:url('potosi.png')">
+              <span>Potosí</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Tarija" required style="display:none;">
+            <button type="button" style="background-image:url('tarija.jpg')">
+              <span>Tarija</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Beni" required style="display:none;">
+            <button type="button" style="background-image:url('beni.jpg')">
+              <span>Beni</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Pando" required style="display:none;">
+            <button type="button" style="background-image:url('pando.jpg')">
+              <span>Pando</span>
+            </button>
+          </label>
+          <label>
+            <input type="radio" name="departamento" value="Santa Cruz" required style="display:none;">
+            <button type="button" style="background-image:url('santacruz.jpg')">
+              <span>Santa Cruz</span>
+            </button>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+  </div>
+
+  <!-- 🔹 Script menú -->
+  <script>
+    function toggleMenu() {
+      document.querySelector(".menu-links").classList.toggle("show");
+    }
+
+    // Hacer que al hacer clic en un botón de departamento, se seleccione el radio correspondiente
+    const deptButtons = document.querySelectorAll('.departamentos button');
+    deptButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const radio = btn.previousElementSibling;
+        radio.checked = true;
+        // Resaltar el botón seleccionado
+        deptButtons.forEach(b => b.style.outline = 'none');
+        btn.style.outline = '3px solid #337ab7';
+      });
+    });
+  </script>
+
+</body>
+</html>

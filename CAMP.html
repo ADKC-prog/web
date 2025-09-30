@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clasificación de Pilotos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url('fondo2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    /* === ESTILOS NAV === */
+    nav {
+      background-color: #c2cbd4;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      position: absolute;
+      left: 15px;
+      height: 60px;
+      width: auto;
+    }
+
+    .boton {
+      background-color: #d0e0ff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #a5c9ff;
+      transform: scale(1.05);
+    }
+
+    .destacado {
+      background-color: #e57373!important;
+      font-weight: bold;
+    }
+
+    .header {
+      background-color: rgba(0, 191, 255, 0.85);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 191, 255, 0.85);
+    }
+    .tab {
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .tab.active {
+      border-bottom: 4px solid white;
+    }
+    .driver-list {
+      padding: 20px;
+    }
+    .driver {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .driver-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .driver-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00bfff;
+    }
+    .driver .name {
+      font-weight: bold;
+    }
+    .driver .team {
+      color: #555;
+    }
+    .driver .points {
+      font-weight: bold;
+      background-color: #00bfff;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="ADK.jpg" alt="Logo ADKC" class="logo">
+    <button class="boton" onclick="history.back()">Atrás</button>
+    <a href="FORMULARIO.html"><button class="boton">Únete y compite</button></a>
+    <a href="INFO.html"><button class="boton">Requisitos</button></a>
+    <a href="https://maps.app.goo.gl/2Mbgy83nfYngbA1X8" target="_blank"><button class="boton">Ubicación</button></a>
+    <a href="CALENDARIO.html"><button class="boton destacado">Calendario</button></a>
+    <a href="RES.html"><button class="boton destacado">Resultados</button></a>
+    <a href="CAMP.html"><button class="boton destacado">Campeonato</button></a>
+  </nav>
+
+  <div class="header">CLASIFICACIÓN</div>
+  <div class="tabs">
+    <div class="tab active">Pilotos</div>
+  </div>
+  <div class="driver-list">
+    <div class="driver">
+      <div class="driver-info">
+        <img src="piastri.jpg" alt="Oscar Piastri">
+        <div>
+           <a href="camp1.html" style="text-decoration:none; color:#000;">
+                   1. Oscar Piastri
+           </a>
+          <div class="team">McLaren</div>
+        </div>
+      </div>
+      <div class="points">186 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="norris.jpg" alt="Lando Norris">
+        <div>
+          <a href="camp2.html" style="text-decoration:none; color:#000;">2. Lando Norris</a>
+          <div class="team">McLaren</div>
+        </div>
+      </div>
+      <div class="points">176 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="verstappen.jpg" alt="Max Verstappen">
+        <div>
+          <a href="camp3.html" style="text-decoration:none; color:#000;">3. Max Verstappen</a>
+          <div class="team">Red Bull Racing</div>
+        </div>
+      </div>
+      <div class="points">137 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="russell.jpg" alt="George Russell">
+        <div>
+          <a href="camp4.html" style="text-decoration:none; color:#000;">4. George Russell</a>
+          <div class="team">Mercedes</div>
+        </div>
+      </div>
+      <div class="points">111 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="leclerc.jpg" alt="Charles Leclerc">
+        <div>
+         <a href="camp5.html" style="text-decoration:none; color:#000;">5. Charles Leclerc</a>
+          <div class="team">Ferrari</div>
+        </div>
+      </div>
+      <div class="points">94 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="hamilton.jpg" alt="Lewis Hamilton">
+        <div>
+         <a href="camp6.html" style="text-decoration:none; color:#000;">6. Lewis Hamilton</a>
+          <div class="team">Ferrari</div>
+        </div>
+      </div>
+      <div class="points">71 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="antonelli.jpg" alt="Kimi Antonelli">
+        <div>
+        <a href="camp7.html" style="text-decoration:none; color:#000;">7. Kimi Antonelli</a>
+          <div class="team">Mercedes</div>
+        </div>
+      </div>
+      <div class="points">48 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="albon.jpg" alt="Alexander Albon">
+        <div>
+          <a href="camp8.html" style="text-decoration:none; color:#000;">8. Alexander Albon</a>
+          <div class="team">Williams</div>
+        </div>
+      </div>
+      <div class="points">42 PTS</div>
+    </div>
+    <div class="driver">
+      <div class="driver-info">
+        <img src="hadjar.jpg" alt="Isack Hadjar">
+        <div>
+          <a href="camp9.html" style="text-decoration:none; color:#000;">9. Isack Hadjar</a>
+          <div class="team">RB</div>
+        </div>
+      </div>
+      <div class="points">31 PTS</div>
+    </div>
+  </div>
+</body>
+</html>

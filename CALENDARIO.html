@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Carreras - ADKC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('fondo2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #1c1c1c;
+    }
+
+    /* --- estilos del menú principal --- */
+    nav {
+      background-color: #c2cbd4;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .logo {
+      position: absolute;
+      left: 15px;
+      height: 60px;
+      width: auto;
+    }
+    .boton {
+      background-color: #d0e0ff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .boton:hover {
+      background-color: #a5c9ff;
+      transform: scale(1.05);
+    }
+    .destacado {
+      background-color: #e57373 !important;
+      font-weight: bold;
+    }
+
+    header {
+      background: rgba(74, 144, 226, 0.95);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #1c73c2;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .evento {
+      background: rgba(255, 255, 255, 0.95);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .evento:hover {
+      transform: scale(1.01);
+    }
+
+    .evento h2 {
+      margin: 0;
+      color: #1c1c1c;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .fecha {
+      color: #4a90e2;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .ubicacion {
+      color: #444;
+      font-size: 14px;
+    }
+
+    .badge {
+      align-self: flex-start;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: #4a90e2;
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .badge.pendiente {
+      background: #e63946;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 40px;
+      border-radius: 0 0 12px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="ADK.jpg" alt="Logo ADKC" class="logo">
+    <button class="boton" onclick="history.back()">Atrás</button>
+    <a href="FORMULARIO.html"><button class="boton">Únete y compite</button></a>
+    <a href="INFO.html"><button class="boton">Requisitos</button></a>
+    <a href="https://maps.app.goo.gl/2Mbgy83nfYngbA1X8" target="_blank"><button class="boton">Ubicación</button></a>
+    <a href="CALENDARIO.html"><button class="boton destacado">Calendario</button></a>
+    <a href="RES.html"><button class="boton destacado">Resultados</button></a>
+    <a href="CAMP.html"><button class="boton destacado">Campeonato</button></a>
+  </nav>
+
+  <header>
+    <h1>Calendario de Carreras ADKC 2025</h1>
+  </header>
+
+  <main>
+    <div class="evento">
+      <h2>Gran Premio Cochabamba</h2>
+      <p class="fecha">15 de Julio, 2025</p>
+      <p class="ubicacion">Pista ADKC - Cochabamba</p>
+      <span class="badge">Confirmado</span>
+    </div>
+
+    <div class="evento">
+      <h2>Campeonato Nacional</h2>
+      <p class="fecha">28 de Agosto, 2025</p>
+      <p class="ubicacion">Circuito La Paz</p>
+      <span class="badge">Confirmado</span>
+    </div>
+
+    <div class="evento">
+      <h2>Final Departamental</h2>
+      <p class="fecha">21 de Septiembre, 2025</p>
+      <p class="ubicacion">Autódromo Santa Cruz</p>
+      <span class="badge">Confirmado</span>
+    </div>
+
+    <div class="evento">
+      <h2>Carrera de Exhibición</h2>
+      <p class="fecha">Por confirmar</p>
+      <p class="ubicacion">Pista a definir</p>
+      <span class="badge pendiente">Pendiente</span>
+    </div>
+  </main>
+
+  <footer>
+    Asociación Departamental de Karting Cochabamba - ADKC © 2025
+  </footer>
+
+</body>
+</html>

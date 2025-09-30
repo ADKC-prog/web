@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Más Información - ADKC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 🔹 Estilos de la barra de navegación (idénticos a la principal) */
+    nav {
+      background-color: #c2cbd4;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      position: absolute;
+      left: 15px;
+      height: 60px;
+      width: auto;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: black;
+      position: absolute;
+      right: 20px;
+    }
+
+    .menu-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .boton {
+      background-color: #d0e0ff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #a5c9ff;
+      transform: scale(1.05);
+    }
+
+    .destacado {
+      background-color: #e57373 !important;
+      font-weight: bold;
+    }
+
+    @media (max-width: 991px) {
+      .logo {
+        position: static;
+        margin-bottom: 10px;
+        height: 40px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .menu-links.show {
+        display: flex;
+      }
+
+      .boton {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4faff;
+    }
+
+    header {
+      background-color: #4a90e2;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 28px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      font-size: 22px;
+      color: #4a90e2;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .contenedor-imagenes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .contenedor-imagenes img {
+      width: 300px;
+      max-width: 90%;
+      border: 3px solid #a6c9f5;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .contenedor-imagenes img:hover {
+      transform: scale(1.05);
+    }
+
+    .popup-fondo {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-fondo img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="ADK.jpg" alt="Logo ADKC" class="logo">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu-links">
+      <button class="boton" onclick="history.back()">Atrás</button>
+      <a href="FORMULARIO.html"><button class="boton">Únete y compite</button></a>
+      <a href="INFO.html"><button class="boton">Requisitos</button></a>
+      <a href="https://maps.app.goo.gl/2Mbgy83nfYngbA1X8" target="_blank"><button class="boton">Ubicación</button></a>
+      <a href="CALENDARIO.html"><button class="boton destacado">Calendario</button></a>
+      <a href="RES.html"><button class="boton destacado">Resultados</button></a>
+      <a href="CAMP.html"><button class="boton destacado">Campeonato</button></a>
+    </div>
+  </nav>
+
+  <header>Más Información</header>
+  <div class="subtitulo">Requisitos para ser parte</div>
+
+  <div class="contenedor-imagenes">
+    <img src="req1.jpg" alt="Requisito 1" onclick="ampliar(this)">
+    <img src="req2.jpg" alt="Requisito 2" onclick="ampliar(this)">
+    <img src="req3.jpg" alt="Requisito 3" onclick="ampliar(this)">
+    <img src="req4.jpg" alt="Requisito 4" onclick="ampliar(this)">
+  </div>
+
+  <div class="popup-fondo" id="popup" onclick="cerrarPopup()">
+    <img id="popup-img" src="" alt="Imagen ampliada">
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".menu-links").classList.toggle("show");
+    }
+
+    function ampliar(img) {
+      const popup = document.getElementById("popup");
+      const popupImg = document.getElementById("popup-img");
+      popupImg.src = img.src;
+      popup.style.display = "flex";
+    }
+
+    function cerrarPopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
