@@ -69,6 +69,13 @@
       margin: 20px 0;
       width: 100%;
       box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .resultado .texto {
+      flex: 1;
     }
     .resultado h4 {
       margin: 0 0 10px 0;
@@ -79,11 +86,21 @@
       color: #333;
       font-size: 16px;
     }
+    .mas-puestos {
+      display: none;
+      margin-top: 10px;
+      background-color: rgba(200, 220, 255, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+    }
+    video {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
-
-  <!-- Barra de navegación igual que en el index -->
   <nav>
     <img src="ADK.jpg" alt="Logo ADKC" class="logo">
     <button class="boton" onclick="history.back()">Atrás</button>
@@ -100,27 +117,53 @@
     <div style="display: flex; flex-direction: column; gap: 20px;">
 
       <div class="resultado">
-        <h4>GP de Mónaco 2025</h4>
-        <p>1° Charles Leclerc</p>
-        <p>2° Oscar Piastri</p>
-        <p>3° Carlos Sainz</p>
+        <div class="texto">
+          <h4>GP de Mónaco 2025</h4>
+          <p>1° Jhon Cuellar</p>
+          <p>2° Sergio Aguirre</p>
+          <p>3° Juan Carlos Tarqui</p>
+          <button class="boton" onclick="togglePuestos('monaco')">Ver más puestos</button>
+          <div id="monaco" class="mas-puestos">
+            <p>4° Gerson Catari</p>
+            <p>5° Jaime Cervantes</p>
+            <p>6° Sebastian Uribe</p>
+            <p>7° Luis Aguirre</p>
+            <p>8° Sebastian Herrera</p>
+          </div>
+        </div>
+        <video controls>
+          <source src="V1.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="resultado">
-        <h4>GP de Imola 2024</h4>
-        <p>1° Max Verstappen</p>
-        <p>2° Lando Norris</p>
-        <p>3° Charles Leclerc</p>
-      </div>
-
-      <div class="resultado">
-        <h4>GP de Miami 2024</h4>
-        <p>1° Lando Norris</p>
-        <p>2° Max Verstappen</p>
-        <p>3° Charles Leclerc</p>
+        <div class="texto">
+          <h4>GP de Imola 2024</h4>
+          <p>1° Sergio Aguirre </p>
+          <p>2° Jhon Cuellar</p>
+          <p>3° Gerson Catari</p>
+          <button class="boton" onclick="togglePuestos('imola')">Ver más puestos</button>
+          <div id="imola" class="mas-puestos">
+            <p>4° Sebastian Uribe</p>
+            <p>5° Luis Aguirre</p>
+            <p>6° Juan Carlos Tarqui</p>
+            <p>7° Sebastian Herrera</p>
+            <p>8° Jaime Cervantes</p>
+          </div>
+        </div>
+        <video controls>
+          <source src="V2.mp4" type="video/mp4">
+        </video>
       </div>
 
     </div>
   </div>
+
+  <script>
+    function togglePuestos(id) {
+      const elem = document.getElementById(id);
+      elem.style.display = elem.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>

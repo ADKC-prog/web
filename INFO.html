@@ -5,7 +5,6 @@
   <title>Más Información - ADKC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* 🔹 Estilos de la barra de navegación (idénticos a la principal) */
     nav {
       background-color: #c2cbd4;
       padding: 15px 20px;
@@ -96,7 +95,8 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4faff;
+      background: url('fondo2.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
@@ -115,44 +115,29 @@
       font-weight: bold;
     }
 
-    .contenedor-imagenes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    .contenedor-texto {
       padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.9); /* fondo blanco suave para leer mejor */
+      border-radius: 10px;
     }
 
-    .contenedor-imagenes img {
-      width: 300px;
-      max-width: 90%;
-      border: 3px solid #a6c9f5;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.2s;
+    .contenedor-texto h2 {
+      color: #4a90e2;
+      margin-top: 30px;
     }
 
-    .contenedor-imagenes img:hover {
-      transform: scale(1.05);
+    .contenedor-texto h3 {
+      color: #e57373;
+      margin-top: 20px;
     }
 
-    .popup-fondo {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .popup-fondo img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #fff;
+    .contenedor-texto ul {
+      margin-left: 20px;
+      list-style: square;
     }
   </style>
 </head>
@@ -175,31 +160,87 @@
   <header>Más Información</header>
   <div class="subtitulo">Requisitos para ser parte</div>
 
-  <div class="contenedor-imagenes">
-    <img src="req1.jpg" alt="Requisito 1" onclick="ampliar(this)">
-    <img src="req2.jpg" alt="Requisito 2" onclick="ampliar(this)">
-    <img src="req3.jpg" alt="Requisito 3" onclick="ampliar(this)">
-    <img src="req4.jpg" alt="Requisito 4" onclick="ampliar(this)">
-  </div>
+  <div class="contenedor-texto">
 
-  <div class="popup-fondo" id="popup" onclick="cerrarPopup()">
-    <img id="popup-img" src="" alt="Imagen ampliada">
+    <h2>1. Un Karting Propio</h2>
+    <h3>¿Dónde puedo comprar un karting?</h3>
+    <p>Si estás iniciando, la mejor opción es comprar un karting a medio uso, usualmente los pilotos actualizan sus karts cada cierto tiempo y ofrecen chasis, piezas o kartings completos (incluido el motor) a la venta en redes sociales o en los grupos de whatsapp.</p>
+
+    <h3>¿Qué características tiene?</h3>
+    <ul>
+      <li><b>Chasis Homologado:</b> Cualquier marca y procedencia. Con trompa y pontones laterales, los pontones laterales no deben superar la cara externa de los neumáticos traseros. Tolerancia máxima en este punto de 4 cm. Es obligatorio el uso de paragolpes traseros de plástico y cubrir hasta un 80% de los neumáticos traseros. Además, el kart deberá contar de 20x20 cm cada uno, donde llevará el número del competidor. Uno sobre la parte delantera, otro en la posterior y los restantes en los laterales.</li>
+      <li><b>Motor:</b> Depende de la categoría.</li>
+      <li><b>Caja de Velocidades:</b> De 5 velocidades, libre en las relaciones. La ubicación de la palanca de cambios es libre.</li>
+      <li><b>Carburador:</b> Libre (en marca, modelo y tamaño).</li>
+      <li><b>Frenos:</b> Únicamente en el eje trasero.</li>
+      <li><b>Escape y Terminal:</b> Libre en su forma y diseño, deben ser ambos artesanales de fabricación.</li>
+    </ul>
+
+    <h2>2. Licencia de Piloto de Karting</h2>
+    <ul>
+      <li><b>Formulario de Licencia:</b> Debidamente llenado con una fotografía (4x4) con fondo blanco. Contactar al Presidente de la ADKC.</li>
+      <li><b>Depósito a la FEBAD:</b> Bs. 400 en Banco BISA, Cuenta N° 4049640027 FEBAD.</li>
+      <li><b>Cédula de Identidad:</b> Fotocopia a color vigente y legible.</li>
+      <li><b>Licencia de Conducir:</b> Fotocopia a color vigente y legible.</li>
+      <li><b>Ficha médica:</b> De la gestión y/o certificación legal de su médico personal con formulario del Colegio Médico Nacional.</li>
+      <li><b>Piloto Menor de Edad:</b> Carta notariada de autorización por parte de los responsables, padres y/o tutores deslindando toda responsabilidad tanto de la integridad del piloto como de terceras personas a la FEBAD, asociaciones departamentales, al Viceministerio de Deportes y a los organizadores del evento.</li>
+    </ul>
+
+    <h2>3. Indumentaria Reglamentaria</h2>
+    <ul>
+      <li><b>Casco:</b> Integral cerrado para proteger la cabeza de lesiones.</li>
+      <li><b>Balaclava:</b> Máscara resistente al calor y fuego que protege el rostro y la cabeza en caso de incendio.</li>
+      <li><b>Cuellera:</b> Ayuda a prevenir lesiones espinales en el cuello en caso de choque o pérdida de control.</li>
+      <li><b>Overol:</b> Resistente al calor y fuego para evitar quemaduras por contacto con partes calientes o por incendio.</li>
+      <li><b>Costillera:</b> Previene lesiones en las costillas por rebote del cuerpo contra la butaca o en un choque.</li>
+      <li><b>Guantes:</b> Resistentes al calor y fuego, evitan quemaduras y garantizan agarre al volante.</li>
+      <li><b>Botas para conducir:</b> Ligeras y de caña alta, protegen pie y tobillo de movimientos bruscos.</li>
+    </ul>
+
+    <h2>4. Categorías, Edades y Pesos</h2>
+    <h3>Baby Kart 6.5</h3>
+    <p>Motor Honda GX 6.5 HP<br>
+    De 4 a 8 años, al menos 85Kg.</p>
+
+    <h3>Infantil 6.5</h3>
+    <p>Motor Honda GX 6.5 HP<br>
+    De 8 a 13 años, al menos 100Kg.</p>
+
+    <h3>F200 STD</h3>
+    <p>Motor de fabricación china de 200cc.<br>
+    Modelo 163FML • 4 Tiempos<br>
+    Sin Modificaciones.<br>
+    Desde los 13 años, al menos 175Kg.</p>
+
+    <h3>Aclaración</h3>
+    <p>El peso descrito en cada categoría debe ser el peso del karting más el peso del piloto con toda su indumentaria de competición al finalizar cada manga.</p>
+
+    <h3>F200 SUPER</h3>
+    <p>Motor de fabricación china de 200cc.<br>
+    Modelo 163FML • 4 Tiempos<br>
+    Preparado para competición.<br>
+    Desde los 13 años.</p>
+
+    <p>Senior al menos 170Kg<br>
+    Master al menos 175Kg</p>
+
+    <p>En Competencias Departamentales en Cbba. solo se corre una única categoría de 180Kg.</p>
+
+    <h3>125 SUDAM</h3>
+    <p>Motores IAME MY9, MY10, MY13,<br>
+    SUDAM / PARILLA 125cc Refrigerado por aire, sin Modificaciones.<br>
+    125cc • 2 Tiempos</p>
+
+    <p>Chasis Homologado CIK 2000 en Adelante.</p>
+
+    <p>Junior al menos 130Kg<br>
+    Master al menos 150Kg<br>
+    Profesional al menos 160Kg</p>
   </div>
 
   <script>
     function toggleMenu() {
       document.querySelector(".menu-links").classList.toggle("show");
-    }
-
-    function ampliar(img) {
-      const popup = document.getElementById("popup");
-      const popupImg = document.getElementById("popup-img");
-      popupImg.src = img.src;
-      popup.style.display = "flex";
-    }
-
-    function cerrarPopup() {
-      document.getElementById("popup").style.display = "none";
     }
   </script>
 
